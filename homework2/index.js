@@ -2,7 +2,6 @@
 const n = +prompt(`Введіть ціле число N.`); 
  //   console.log(`number N: `, n);
 //Перевірте, чи є передане значення N і M ЦІЛИМ числом.   
- let attemts = 0  
 while(!Number.isInteger(n) || n == ""){
     n = +prompt(`Це не є ціле число або рядок пустий, спробуйте ще раз`);
 }
