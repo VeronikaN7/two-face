@@ -59,17 +59,17 @@ function getRandomPassword(password){
 }
     return resultPassword;
 }
-/*
+
 //9.Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
-function deleteLetters(а, str){
-let result;
+function deleteLetters(a, str){
+let result = "";
 for(let i=0; i < str.length; i++){
-    if(strNew[i] !== a)
+    if(str[i] !== a)
     result += str[i];
 }
     return result;
 }
-*/
+
 
 //10.Створіть функцію, яка перевіряє, чи є слово паліндромом. Приклад: isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу гусеня") -> true
 function isPalyndrom(str){
@@ -102,9 +102,8 @@ document.writeln(`Функція №1: Найбільша цифра у числ
 Функція №6 Скільки разів певна буква "а" повторюється у слові Асталавіста: ${countLetter(`а`, `Асталавіста`)}<br>
 Функція №7 Конвертація 100$ в гривні: ${convertCurrency(`100$`)}<br>
 Функція №8 Генерації випадкового паролю 8 цифр: ${getRandomPassword(8)}<br>
-
+Функція №9 Функція, яка видаляє всі букви "а" зі слова ананас: ${deleteLetters(a = `а`,`ананас`)}<br>
 Функція №10 Перевіряє, чи є слово паліндромом - Я несу гусеня: ${isPalyndrom( `Я несу гусеня`)}<br>
 Функція №11 Функція, яка видалить з речення букви, які зустрічаються більше 1 раз-Бісквіт був дуже ніжним: ${deleteDuplicateLetter(`Бісквіт був дуже ніжним`)}
 `);
 
-//Функція №9 Функція, яка видаляє всі букви "а" зі слова ананасами: ${deleteLetters(a = `a`, `ананасами`)}<br>
