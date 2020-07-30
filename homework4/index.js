@@ -5,9 +5,9 @@ const marks = [4, 5, 5, 3, 4, 5];
 //1.Розділіть студентів на пари(хлопець + дівчина) для работи над проєктом. У вас повинен вийти вкладений масив з парами студентів: [["Саша", "Олена"], [..], [...]];
 function getPairs(arr){
     pairs = [];
-    pairs.push([arr[0], arr[2]]);
-    pairs.push([arr[1], arr[3]]);
-    pairs.push([arr[4], arr[5]]);
+    pairs.push([arr[0] +` i `+ arr[2]]);
+    pairs.push([arr[1] +` i `+ arr[3]]);
+    pairs.push([arr[4]+ ` i `+ arr[5]]);
     return pairs;
 }
 console.log(getPairs(students));
@@ -16,7 +16,7 @@ console.log(getPairs(students));
 function getProject(newPairs, arr1){
     let project = [];
     for( let i = 0; i < pairs.length; i++ ){
-    project[i] = [pairs[i].join(", "), arr1[i]]
+    project[i] = [pairs[i].join(" i "), arr1[i]]
     }
     return project;
 }
@@ -37,7 +37,7 @@ const a = getProject(students, themes);
 function projectsMark( a ,[min, max]){
     let pairsMark = [];
     for( let i = 0; i < a.length; i++ ){
-        pairsMark[i] =  [a[i].concat(Math.floor(Math.random()*(max- min+1))  + min)]
+        pairsMark[i] =  a[i].concat(Math.floor(Math.random()*(max- min+1))  + min)
 }
 return pairsMark;
 }
