@@ -112,5 +112,26 @@ console.log('9.Розділити слово  commander на склади: '+ di
 
 
 
+//10.
+function generateCombinations(word){
+let firstChar,
+     charsRemaining,
+     remainingsPerms;
+let results = [];
 
+    if(word.length == 1)return word;{
 
+    for(let i = 0; i < word.length; i++){
+        firstChar = word[i];// m a n 
+        charsRemaining = word.substring(0, i) + word.substring(i + 1); //an  mn  ma
+       // console.log(firstChar, charsRemaining)
+        remainingsPerms = generateCombinations(charsRemaining)
+       for(let j = 0; j < remainingsPerms.length; j++){
+           results.push(firstChar + remainingsPerms[j]);
+          // console.log(results);
+       }
+    }
+    return results;
+} 
+}
+console.log(generateCombinations("man"))
