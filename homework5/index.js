@@ -7,19 +7,18 @@ console.log(`1.Mасив випадкових цілих чисел.: ` + getRan
 
 //2.Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ
 //Приклад: getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 2
-const numbers2 = [6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2];
-
+const numbers2 = [6, 2, 55, 55, 55, 11, 78, 2, 55, 77.5, 57, 87, 23.5, 23.5, 23.5, 56, 3, 2];
 function getModa (numbers2){
 const frequencyTable = {};
 numbers2.forEach(item => frequencyTable[item] = frequencyTable[item] + 1  || 1);
     let maxFrequecy = 0;
     let modes = [];
     for(const key in frequencyTable){
-        if(frequencyTable[key] > maxFrequecy){
+        if(frequencyTable[key] > maxFrequecy && Number.isInteger(Number(key))){
         modes = [Number(key)];
         maxFrequecy = frequencyTable[key];
     }
-    else if (frequencyTable[key] === maxFrequecy){
+    else if (frequencyTable[key] === maxFrequecy && Number.isInteger(Number(key))){
         modes.push(Number(key));
     }
 }
@@ -61,17 +60,14 @@ console.log(`5.Парні числа: ` + filterEvenNumbers);
 
 //6.Створіть функцію countPositiveNumbers(...numbers) – яка порахує кількість чисел більших 0
 //Приклад: countPositiveNumbers(1, -2, 3, -4, -5, 6) -> 3
-const numbers6 = [1, -2, 3, -4, -5, 6];
-const countPositiveNumbers = numbers6.filter((item)=>{
-    if(item > 0)
-    return item
-});
-console.log(`6.Кількість позитисних чисел: ` + countPositiveNumbers.length);
+const numbers6 = [1, -2, 3, -4, -5, 6, 5];
+const countPositiveNumbers = numbers6.filter((item) => item > 0).length;
+
+console.log(`6.Кількість позитисних чисел: ` + countPositiveNumbers);
 
 //7.Створіть функцію getDividedByFive(...numbers) – яка відфільтрує усі елементи в масиві та залишить тільки ті, які діляться на ціло на 5
 const numbers7 = [6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2] //-> [55, 55]
 const getDividedByFive = numbers7.filter((item) => {
-    numbers7.sort(function(a, b) { return a - b;});
     if(item % 5 === 0) 
     return true;
     });
