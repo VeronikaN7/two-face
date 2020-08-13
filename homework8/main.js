@@ -23,6 +23,7 @@ class Student {
 
    set getMarks(mark){
    this.getMarks.push(mark)
+
    }
 
   getAverageMark() {
@@ -34,10 +35,13 @@ class Student {
 
     dismiss() {
       this.isDismissed = true;
+      return this.fullName
+    
     }
 
     recover(){
       this.isDismissed = false;
+      return this.fullName
     }
 
 }
@@ -70,10 +74,10 @@ console.log(`3.marks`, student.getMarks)
 student.getMarks = 5;
 console.log(`4.add marks`, student.getMarks)
 console.log(`5.Середня оцінка`, student.getAverageMark())
-student.dismiss()
-console.log(`6.Dismiss student`, student.getMarks)
-student.recover()
-console.log(`7.Recover student`, student.getMarks)
+console.log(`6.Студента виключено`, student.dismiss())
+console.log(`6.Студента виключено, тому оцінок немає`, student.getMarks)
+console.log(`7.Студента поновлено `, student.recover())
+console.log(`7.Оцінки поновленого студента`, student.getMarks)
 
 const student2 = new BudgetStudent(1400, `Вища Школа Психотерапії м.Одеса`, `1`, `Остап Бендер`, [5, 4, 4, 5])
 student.dismiss()
