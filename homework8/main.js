@@ -51,9 +51,9 @@ class BudgetStudent extends Student{
   constructor(scholarship, university, course, fullName, marks) {
     super(university, course, fullName, marks);
     this.scholarship = scholarship;
-    //setTimeout(() => this.getBudget(), 2000);
-    
-  }
+      //setInterval(() => this.getBudget(), 2000);
+  
+}
   getBudget(){
     if (!this.isDismissed){
       return `Студента виключено і він не отримує стипендії`}
