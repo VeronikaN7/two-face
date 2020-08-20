@@ -1,5 +1,4 @@
 body{
-    
     background: url(nature2.jpg) no-repeat; 
     background-size: cover;
     color:rgb(247, 247, 247);
@@ -29,6 +28,7 @@ body{
     text-align: center;
     background: rgba(8, 0, 7, 0.322);
     text-shadow: 0 0 5px  rgba(8, 0, 7, 0.322);
+    cursor: pointer;
 }
 
 
