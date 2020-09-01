@@ -11,9 +11,10 @@
     if(length === 0){
     clearInterval(timer)
     resolve(word)
+    
     }
   },  length * 50);
   
 })}
 
-getRandomChinese(5).then(word => console.log(word))
+getRandomChinese(7).then(word => console.log('китайські ієрогліфи з 7 символів:' + word))
