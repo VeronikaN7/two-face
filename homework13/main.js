@@ -1,4 +1,4 @@
-
+//
 function* createIdGenerator(){
   let i=0;
   while(true){
@@ -10,6 +10,7 @@ const idGenerator = createIdGenerator();
 setInterval(() => {
   console.log(idGenerator.next().value)
 }, 1000);
+
 
 
 
